@@ -1,0 +1,1 @@
+export const urlQuestions = "https://opentdb.com/api.php?amount=5";
