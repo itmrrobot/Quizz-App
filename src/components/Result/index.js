@@ -1,6 +1,8 @@
 import "./Result.css";
 import amazing from "../../assets/img/amazing.png";
 import completed from "../../assets/img/completed.png";
+import { useState } from "react";
+import ListQuestions from "../ListQuestions";
 
 function Result({ ...props }) {
   const {
@@ -9,14 +11,18 @@ function Result({ ...props }) {
     totalQuestions,
     allYourAnswerChoices
   } = props;
+  const [isHide,setIsHide] = useState(false);
   console.log(allYourAnswerChoices);
   const millis = Date.now() - startTime.current;
   const seconds = Math.floor(millis / 1000);
   const check = numberCorrect.current >= Math.round(totalQuestions / 2);
 
-  const handlePlayAgain = () => {};
+  const handlePlayAgain = () => {
+    setIsHide(true);
+  };
   return (
-    <div className="wrapper">
+    <>
+    {isHide===false?<div className="wrapper">
       <img
         src={check === true ? amazing : completed}
         alt="amzing.png"
@@ -66,7 +72,8 @@ function Result({ ...props }) {
           );
         })}
       </div>
-    </div>
+    </div>:<ListQuestions/>}
+    </>
   );
 }
 
