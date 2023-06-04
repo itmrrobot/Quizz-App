@@ -58,5 +58,6 @@
 
 .incorrect-answers {
     display: flex;
+    justify-content: left;
     color: #d01624;
 }

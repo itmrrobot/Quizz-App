@@ -97,7 +97,7 @@ function ListQuestions({setHome}) {
                 </button>
               );
             })}
-            {isChoose===true&&<>{showFeedBack(yourAnswerChoose).length===15?<p className="message-success">{showFeedBack(yourAnswerChoose)}</p>:<p className="message-success"><span style={{color:"#d01624"}}>Wrong anwer! </span> {showFeedBack(yourAnswerChoose)}</p>}</>}
+            {isChoose===true&&<>{showFeedBack(yourAnswerChoose).length===15?<p className="message-success">{showFeedBack(yourAnswerChoose)}</p>:<p className="message-success"><span style={{color:"#d01624"}}>Wrong anwer! </span><br/> {showFeedBack(yourAnswerChoose)}</p>}</>}
             {isShowMessage===true&&<p className="message-warning">You must choose the answer</p>}
             <button className="btn-next" onClick={handleClick}>
               Next

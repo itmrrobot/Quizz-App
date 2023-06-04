@@ -30,12 +30,14 @@
 
 .message-warning {
     color: #d01624;
+    margin-bottom: 8px;
 }
 
 .message-success {
     color: #64b450;
     text-align: center;
     padding: 0 24px;
+    margin-bottom: 8px;
 }
 
 .btn-next {
@@ -60,10 +62,4 @@
     color: #fff;
     border: none;
     cursor: pointer;
-}
-
-@media(max-width:739px) {
-    .question {
-        padding: 0 32px;
-    }
 }
